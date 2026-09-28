@@ -1,0 +1,15 @@
+# 由脚本生成或下载的大文件
+env/
+models/
+embeddings/
+cache/
+*.zip
+
+# 本地环境
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# 课程要求文档
+*.docx

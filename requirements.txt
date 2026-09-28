@@ -1,0 +1,12 @@
+# 实验环境为 Python 3.10。torch 2.4.1+cu118 需要从 PyTorch 官方源单独安装：
+#   pip install torch==2.4.1 --index-url https://download.pytorch.org/whl/cu118
+transformers==4.46.3
+numpy==1.26.4
+pandas==2.2.3
+scikit-learn==1.5.2
+scipy<1.14
+gensim==4.3.3
+nltk==3.9.1
+tqdm
+huggingface_hub
+safetensors

@@ -1,0 +1,139 @@
+{
+  "best_C": 0.1,
+  "c_search": [
+    {
+      "C": 0.01,
+      "val_accuracy": 0.9826238053866203,
+      "val_macro_f1": 0.9581419873388043,
+      "fit_seconds": 0.1
+    },
+    {
+      "C": 0.1,
+      "val_accuracy": 0.9843614248479583,
+      "val_macro_f1": 0.9625496396385884,
+      "fit_seconds": 0.1
+    },
+    {
+      "C": 1.0,
+      "val_accuracy": 0.9817549956559514,
+      "val_macro_f1": 0.958646867036235,
+      "fit_seconds": 0.1
+    },
+    {
+      "C": 10.0,
+      "val_accuracy": 0.9817549956559514,
+      "val_macro_f1": 0.959783666066223,
+      "fit_seconds": 0.2
+    },
+    {
+      "C": 100.0,
+      "val_accuracy": 0.9765421372719374,
+      "val_macro_f1": 0.9514164261677208,
+      "fit_seconds": 0.3
+    }
+  ],
+  "val": {
+    "accuracy": 0.9843614248479583,
+    "macro_f1": 0.9625496396385884,
+    "report": {
+      "business": {
+        "precision": 0.9421487603305785,
+        "recall": 0.9193548387096774,
+        "f1-score": 0.9306122448979591,
+        "support": 124.0
+      },
+      "politics": {
+        "precision": 0.9487179487179487,
+        "recall": 0.9736842105263158,
+        "f1-score": 0.961038961038961,
+        "support": 152.0
+      },
+      "sports": {
+        "precision": 0.9965675057208238,
+        "recall": 0.9954285714285714,
+        "f1-score": 0.9959977129788451,
+        "support": 875.0
+      },
+      "accuracy": 0.9843614248479583,
+      "macro avg": {
+        "precision": 0.9624780715897837,
+        "recall": 0.9628225402215215,
+        "f1-score": 0.9625496396385884,
+        "support": 1151.0
+      },
+      "weighted avg": {
+        "precision": 0.98438587488431,
+        "recall": 0.9843614248479583,
+        "f1-score": 0.9843369585593035,
+        "support": 1151.0
+      }
+    }
+  },
+  "test": {
+    "accuracy": 0.98438855160451,
+    "macro_f1": 0.9652605421902445,
+    "report": {
+      "business": {
+        "precision": 0.9652777777777778,
+        "recall": 0.9391891891891891,
+        "f1-score": 0.952054794520548,
+        "support": 148.0
+      },
+      "politics": {
+        "precision": 0.9349112426035503,
+        "recall": 0.9575757575757575,
+        "f1-score": 0.9461077844311377,
+        "support": 165.0
+      },
+      "sports": {
+        "precision": 0.9976190476190476,
+        "recall": 0.9976190476190476,
+        "f1-score": 0.9976190476190476,
+        "support": 840.0
+      },
+      "accuracy": 0.98438855160451,
+      "macro avg": {
+        "precision": 0.9659360226667918,
+        "recall": 0.9647946647946647,
+        "f1-score": 0.9652605421902445,
+        "support": 1153.0
+      },
+      "weighted avg": {
+        "precision": 0.9844938995149151,
+        "recall": 0.98438855160451,
+        "f1-score": 0.9843988673201897,
+        "support": 1153.0
+      }
+    }
+  },
+  "embedding": "word2vec trained on AG News",
+  "w2v_params": {
+    "vector_size": 100,
+    "window": 5,
+    "min_count": 2,
+    "sg": 1,
+    "negative": 5,
+    "epochs": 10,
+    "seed": 42,
+    "workers": 1
+  },
+  "embedding_vocab": 43870,
+  "train_docs": 90000,
+  "coverage": {
+    "train": {
+      "docs_with_vectors": 9215,
+      "docs": 9215,
+      "token_coverage": 0.9547
+    },
+    "val": {
+      "docs_with_vectors": 1151,
+      "docs": 1151,
+      "token_coverage": 0.955
+    },
+    "test": {
+      "docs_with_vectors": 1153,
+      "docs": 1153,
+      "token_coverage": 0.9551
+    }
+  }
+}

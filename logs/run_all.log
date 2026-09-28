@@ -1,0 +1,62 @@
+start=2026-09-28 17:31:04
+name, memory.total [MiB], driver_version
+NVIDIA A40, 46068 MiB, 550.54.14
+===== Task 1 17:31:04
+[tokenize] nyt_train: 9215 docs in 26.1s
+[tokenize] nyt_val: 1151 docs in 3.2s
+[tokenize] nyt_test: 1153 docs in 3.1s
+== task1_binary_bow
+  |V| = 128343
+  C=0.01   val acc=0.9844 macro_f1=0.9661
+  C=0.1    val acc=0.9904 macro_f1=0.9760
+  C=1.0    val acc=0.9887 macro_f1=0.9711
+  C=10.0   val acc=0.9896 macro_f1=0.9745
+  C=100.0  val acc=0.9887 macro_f1=0.9720
+[task1_binary_bow] test accuracy=0.9870 macro_f1=0.9712
+== task1_word_frequency
+  |V| = 128343
+  C=0.01   val acc=0.9826 macro_f1=0.9619
+  C=0.1    val acc=0.9826 macro_f1=0.9611
+  C=1.0    val acc=0.9835 macro_f1=0.9627
+  C=10.0   val acc=0.9861 macro_f1=0.9658
+  C=100.0  val acc=0.9896 macro_f1=0.9756
+[task1_word_frequency] test accuracy=0.9879 macro_f1=0.9724
+===== Task 2 17:34:26
+== task2_glove
+  token coverage (test) = 0.9806
+  C=0.01   val acc=0.9826 macro_f1=0.9545
+  C=0.1    val acc=0.9844 macro_f1=0.9597
+  C=1.0    val acc=0.9826 macro_f1=0.9568
+  C=10.0   val acc=0.9791 macro_f1=0.9497
+  C=100.0  val acc=0.9757 macro_f1=0.9438
+[task2_glove] test accuracy=0.9922 macro_f1=0.9826
+[tokenize] ag: 90000 docs in 18.0s
+  trained word2vec on ag: 90000 docs, |V|=43870, 184s
+== task2_w2v_ag
+  token coverage (test) = 0.9551
+  C=0.01   val acc=0.9826 macro_f1=0.9581
+  C=0.1    val acc=0.9844 macro_f1=0.9625
+  C=1.0    val acc=0.9818 macro_f1=0.9586
+  C=10.0   val acc=0.9818 macro_f1=0.9598
+  C=100.0  val acc=0.9765 macro_f1=0.9514
+[task2_w2v_ag] test accuracy=0.9844 macro_f1=0.9653
+  trained word2vec on nyt_train: 9215 docs, |V|=57775, 246s
+== task2_w2v_nyt
+  token coverage (test) = 0.9837
+  C=0.01   val acc=0.9870 macro_f1=0.9677
+  C=0.1    val acc=0.9861 macro_f1=0.9645
+  C=1.0    val acc=0.9826 macro_f1=0.9556
+  C=10.0   val acc=0.9791 macro_f1=0.9467
+  C=100.0  val acc=0.9765 macro_f1=0.9395
+[task2_w2v_nyt] test accuracy=0.9879 macro_f1=0.9725
+===== Task 3 17:42:48
+device=cuda gpu=NVIDIA A40 amp=torch.bfloat16
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at models/bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+epoch 1: loss=0.2814 val acc=0.9705 macro_f1=0.9277 (24s)
+epoch 2: loss=0.0496 val acc=0.9713 macro_f1=0.9297 (14s)
+epoch 3: loss=0.0182 val acc=0.9739 macro_f1=0.9369 (14s)
+[task3_bert] test accuracy=0.9792 macro_f1=0.9530
+memory.used [MiB]
+0 MiB
+end=2026-09-28 17:45:34
